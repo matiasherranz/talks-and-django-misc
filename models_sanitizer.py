@@ -6,8 +6,7 @@ __copyright__ = "Copyright (c) 2010 Matías Herranz"
 
 
 import os
-
-LINE_TO_ADD_TO_FORMS = '{% csrf_token %}\n'
+import re
 
 
 # Base directory path from where to walk template directories.
@@ -16,14 +15,15 @@ CURRENT_PATH = os.path.realpath(".")
 BASE_PATH = CURRENT_PATH + '/trunk/'
 print BASE_PATH
 
-def csrf_form_adder():
+def sanitizer():
     for root, dirs, files in os.walk(BASE_PATH):
         for name in files:
-            if ('.svn' not in root) and name.endswith('.html'):
+            if ('.svn' not in root) and (name == 'models.py'):
                 print '==> root: ', root
 
                 print 'root: ', root
                 print 'name: ', name
+                print''
 
                 make_replacements(root, name)
 
@@ -31,23 +31,15 @@ def csrf_form_adder():
 def make_replacements(root, name):
     filepath = os.path.join(root, name)
 
-    f = open(filepath, 'r')
-    lines = f.readlines()
-    f.close()
+    data = open(filepath).read()
 
-    new_lines = []
-    for line in lines:
-        new_lines.append(line)
-        if  ('<form' in line) and (not '</' in line) and (not '"form' in line):
-                               # exclude form closing   exclude form as a css classname
-            new_lines.append(LINE_TO_ADD_TO_FORMS)
-            print 'Added csrf token ok.\n'
-    new_content = ''.join(new_lines)
-
-    f = open(filepath, 'w')
-    f.write(new_content)
-    f.close()
+    o = open(filepath, "w")
+    # uncomment here to change one or another:
+    # this should be a parameter of the function. A TODO :-)
+#    o.write(re.sub("maxlength", "max_length", data))
+    o.write(re.sub("FloatField", "DecimalField", data))
+    o.close()
 
 
 if __name__ == '__main__':
-    csrf_form_adder()
+    sanitizer()
