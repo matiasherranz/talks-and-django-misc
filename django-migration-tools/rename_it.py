@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+
+__author__ = "Matias Herranz (matiasherranz@gmail.com)"
+__version__ = "0.1"
+
+
 import os
 
 file1 = open('./orig.txt', 'r')

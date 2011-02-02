@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 
-__author__ = "Matías Herranz (matiasherranz@gmail.com)"
+__author__ = "Matias Herranz (matiasherranz@gmail.com)"
 __version__ = "0.1"
-__copyright__ = "Copyright (c) 2010 Matías Herranz"
 
 
 import os
