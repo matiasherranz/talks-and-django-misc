@@ -1,0 +1,13 @@
+<html>
+<head>
+	<title>Tweets!</title>
+</head>
+<body>
+    <h1>Tweeter Clone Timeline</h1>
+    <div id="container">
+        {% for tweet in tweets %}
+        <p> <b>[Tweet id:{{ tweet.id }} | {{ tweet.user.username }}]</b> --> {{ tweet.message }}</p>
+        {% endfor %}
+    </div>
+</body>
+</html>
