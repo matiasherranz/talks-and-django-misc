@@ -1,0 +1,1986 @@
+<!DOCTYPE html>
+<!--
+  Copyright 2010 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+  Original slides: Marcin Wichary (mwichary@google.com)
+  Modifications: Ernest Delgado (ernestd@google.com)
+                 Alex Russell (slightlyoff@chromium.org)
+
+  landslide modifications: Adam Zapletal (adamzap@gmail.com)
+                           Nicolas Perriault (nperriault@gmail.com)
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>De cero a Django en 45 minutos</title>
+    <!-- Styles -->
+    
+    <link rel="stylesheet" media="print" href="/Users/matias/Dev/a_Eventos/PyDay2012/Env/lib/python2.7/site-packages/landslide/themes/default/css/print.css">
+    <link rel="stylesheet" media="screen, projection" href="theme/css/screen.css">
+    
+    
+    <!-- /Styles -->
+    <!-- Javascripts -->
+    
+    <script type="text/javascript" src="/Users/matias/Dev/a_Eventos/PyDay2012/Env/lib/python2.7/site-packages/landslide/themes/default/js/slides.js"></script>
+    
+    
+    <!-- /Javascripts -->
+</head>
+<body>
+  <div id="blank"></div>
+  <div class="presentation">
+    <div id="current_presenter_notes">
+      <div id="presenter_note"></div>
+    </div>
+    <div class="slides">
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>De cero a Django en 45 minutos</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              1/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Matías Herranz</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              2/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>La idea era hablar de ....</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              3/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            
+            <section><p><img alt="Yo" src="Imgs/Yo.jpg" /></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              4/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Pero no se pudo....</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              5/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            
+            <section><p><img alt="Django" src="Imgs/django.png" /></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              6/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_notes">
+          <div class="inner">
+            
+            <header><h1>Algunos conceptos básicos</h1></header>
+            
+            
+            <section><p class="notes">hola.</p>
+<h2>¿Qué es Django?</h2>
+<ul>
+<li>Django es un <code>framework</code>, pensado, nacido y evolucionado para el desarollo de aplicaciones web.</li>
+<li>Agiliza o resuelve tareas repetitivas</li>
+<li>Soluciona problemas o requerimientos frecuentes</li>
+<li>Rápido, limpio</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              7/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Algunos conceptos básicos</h1></header>
+            
+            
+            <section><h2>¿Para qué se usa?</h2>
+<p><strong>Aplicaciones web de los más variados sabores y colores:</strong></p>
+<ul>
+<li>Disqus</li>
+<li>Instagram</li>
+<li>Bitbucket</li>
+<li>Facebook Apps</li>
+<li><a href="http://dpaste.com/">dpaste</a>.</li>
+<li><a href="http://www.chicagocrime.org/">Chicago Crime</a></li>
+<li><a href="http://www.washingtonpost.com/">Washington Post</a></li>
+<li><a href="http://nebula.nasa.gov/">NASA</a></li>
+<li><a href="http://code.google.com/p/steamend/">Juegos online como SteamEnd(Por JuanBC)</a></li>
+<li>Larga lista de etcéteras.</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              8/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Así que....</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              9/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            
+            <section><p><img alt="Brace Yourselves" src="Imgs/Brace.jpg" /></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              10/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>¡Y veamos de qué se trata esto!</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              11/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Intro:</h1></header>
+            
+            
+            <section><h2>Veamos un poco de qué se trata Django:</h2>
+<p><strong>Allá lejos y hace tiempo, por el año 2003, en el "Lawrence Journal World", en Kansas</strong></p>
+<ul>
+<li>Repetición de código</li>
+<li>Pedazos de código que podían reutilizar entre proyectos</li>
+<li>Resolver los mismos problemas una y otra vez</li>
+<li>Juntaron todo, enceraron, pulieron, le pusieron nombre y lo liberaron en 2005</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              12/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Una pizca de ingeniería de software</h1></header>
+            
+            
+            <section><h2>Patrón de diseño: MVC (Model-View-Controller)</h2>
+<p>Patrón de arquitectura de software que separa los <strong>datos</strong>, la <strong>interfaz de usuario</strong> y la <strong>lógica de control</strong> de una aplicación.</p>
+<ul>
+<li><strong>Modelo:</strong> Esta es la <strong><em>representación de la información</em></strong> con la cual el sistema opera.</li>
+<li><strong>Vista:</strong> Este presenta el modelo en un formato adecuado para interactuar, usualmente la <strong><em>interfaz de usuario</em></strong>.</li>
+<li><strong>Controlador:</strong> Este responde a <strong><em>eventos</em></strong>, usualmente acciones del usuario, e invoca peticiones al modelo y, probablemente, a la vista.</li>
+</ul>
+<p><img alt="MVC" src="Imgs/ModelViewControllerDiagram_es.svg" /></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              13/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>MVC y Django</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              14/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>MVC aplicado a Django</h2></header>
+            
+            
+            <section><p><strong>Model:</strong></p>
+<ul>
+<li>Representado en Django por los <strong><em>models</em></strong> (en el respectivo models.py de cada app)</li>
+<li>Clases de Python</li>
+<li>Modelan los datos</li>
+</ul>
+<p><strong>View:</strong></p>
+<ul>
+<li>representado en Django por los <strong><em>templates</em></strong></li>
+<li>forma de visualizar los datos</li>
+<li>HTML, CSS, JS, Django templates</li>
+</ul>
+<p><strong>Controller</strong></p>
+<ul>
+<li>Representado por las <strong><em>views</em></strong></li>
+<li>Procesa los datos ingresados por el usuario</li>
+<li>Lógica de la aplicación, procesamiento de los datos a renderizar mediante los templates</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              15/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Habiendo hablado suficiente....</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              16/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>¡Escribamos código!</h1></header>
+            
+            
+            <section><p><img alt="Code" src="Imgs/code.jpg" /></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              17/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Hagamos un pequeño blog</h1></header>
+            
+            
+            <section><h2>Instalamos Django:</h2>
+<div class="highlight"><pre><span class="lineno">1</span> MacBookPro:PyDay2011 matias<span class="nv">$ </span>pip install django
+</pre></div>
+
+<h2>Creamos el proyecto:</h2>
+<div class="highlight"><pre><span class="lineno">1</span> MacBookPro:PyDay2011 matias<span class="nv">$ </span>mkdir MicroBlog
+<span class="lineno">2</span> MacBookPro:PyDay2011 matias<span class="nv">$ </span><span class="nb">cd </span>MicroBlog/
+<span class="lineno">3</span> MacBookPro:TwitterClone matias<span class="nv">$ </span>django-admin.py startproject microblog
+</pre></div>
+
+<h2>Creamos una app para manejar los posts:</h2>
+<div class="highlight"><pre><span class="lineno">1</span> MacBookPro:TwitterClone matias<span class="nv">$ </span><span class="nb">cd </span>microblog/
+<span class="lineno">2</span> MacBookPro:twitterclone matias<span class="nv">$ </span>python manage.py startapp posts
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              18/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Hagamos un pequeño blog</h1></header>
+            
+            
+            <section><p>Los archivos que nos crea el comando django-admin.py tiene rol función muy bien definido:</p>
+<ul>
+<li><strong><em><strong>init</strong>.py:</em></strong> este archivo no está relacionado con Django particularmente, sino que es más específico de Python e indica que el directorio actual es un módulo.</li>
+<li><strong><em>manage.py:</em></strong> se utiliza para interactuar con el proyecto en particular. Es similar a django-admin.py pero específico de este proyecto. Mediante este programa se puede actualizar la base de datos, ejecutar el servidor de desarrollo, correr tests, etc.</li>
+<li><strong><em>settings.py:</em></strong> en este archivo se encuentra toda la configuración del proyecto en general; la conexión a la base de datos, qué tipo de base usar, en qué lenguaje está el sitio, etc. Observar que este archivo de configuración también es código Python.</li>
+<li><strong><em>urls.py:</em></strong> en este archivo se encuentran todas las url’s disponibles para nuestro sitio. La prolijidad que permite Django en el manejo de urls(con expresiones regulares, nombres, etc) es uno de los puntos fuertes del framework.</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              19/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>MicroBlog: models</h1></header>
+            
+            
+            <section><p>Microblog/microblog/posts/models.py:</p>
+<div class="highlight"><pre><span class="lineno"> 1</span> <span class="c"># -*- coding: utf-8 -*-</span>
+<span class="lineno"> 2</span> <span class="kn">import</span> <span class="nn">datetime</span>
+<span class="lineno"> 3</span> <span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
+<span class="lineno"> 4</span> <span class="kn">from</span> <span class="nn">django.contrib.auth.models</span> <span class="kn">import</span> <span class="n">User</span>
+<span class="lineno"> 5</span> 
+<span class="lineno"> 6</span> <span class="k">class</span> <span class="nc">Post</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+<span class="lineno"> 7</span>     <span class="sd">&quot;&quot;&quot;</span>
+<span class="lineno"> 8</span> <span class="sd">    Model to represent the blog posts.</span>
+<span class="lineno"> 9</span> <span class="sd">    &quot;&quot;&quot;</span>
+<span class="lineno">10</span>     <span class="n">author</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">User</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">null</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="lineno">11</span>     <span class="n">message</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">140</span><span class="p">)</span>
+<span class="lineno">12</span>     <span class="n">date_posted</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">)</span>
+<span class="lineno">13</span> 
+<span class="lineno">14</span>     <span class="k">def</span> <span class="nf">__unicode__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="lineno">15</span>         <span class="k">return</span> <span class="s">&quot;Tweet from: </span><span class="si">%s</span><span class="s">, Txt: </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">username</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="p">,)</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              20/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>MicroBlog: views</h1></header>
+            
+            
+            <section><h2>Mostrar los posts:</h2>
+<p>Microblog/microblog/posts/views.py:</p>
+<div class="highlight"><pre><span class="lineno">1</span> <span class="nd">@login_required</span>
+<span class="lineno">2</span> <span class="k">def</span> <span class="nf">show_timeline</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<span class="lineno">3</span>     <span class="k">return</span> <span class="n">render_to_response</span><span class="p">(</span>
+<span class="lineno">4</span>                     <span class="s">&#39;posts/timeline.html&#39;</span><span class="p">,</span>
+<span class="lineno">5</span>                     <span class="n">RequestContext</span><span class="p">(</span>
+<span class="lineno">6</span>                         <span class="n">request</span><span class="p">,</span>
+<span class="lineno">7</span>                         <span class="p">{</span><span class="s">&#39;posts&#39;</span><span class="p">:</span> <span class="n">Post</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">order_by</span><span class="p">(</span><span class="s">&#39;-date_posted&#39;</span><span class="p">)}</span>
+<span class="lineno">8</span>                     <span class="p">),</span>
+<span class="lineno">9</span>            <span class="p">)</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              21/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>MicroBlog: views</h1></header>
+            
+            
+            <section><h2>Crear un nuevo post:</h2>
+<p>Microblog/microblog/posts/views.py:</p>
+<div class="highlight"><pre><span class="lineno"> 1</span> <span class="nd">@login_required</span>
+<span class="lineno"> 2</span> <span class="k">def</span> <span class="nf">write_post</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<span class="lineno"> 3</span>     <span class="n">layout</span> <span class="o">=</span> <span class="s">&#39;vertical&#39;</span>
+<span class="lineno"> 4</span> 
+<span class="lineno"> 5</span>     <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s">&#39;POST&#39;</span><span class="p">:</span>
+<span class="lineno"> 6</span>         <span class="n">form</span> <span class="o">=</span> <span class="n">PostForm</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">)</span>
+<span class="lineno"> 7</span>         <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>
+<span class="lineno"> 8</span>             <span class="n">new_post</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">commit</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="lineno"> 9</span>             <span class="n">new_post</span><span class="o">.</span><span class="n">author</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span>
+<span class="lineno">10</span>             <span class="n">new_post</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+<span class="lineno">11</span>             <span class="k">return</span> <span class="n">show_timeline</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+<span class="lineno">12</span>     <span class="k">else</span><span class="p">:</span>
+<span class="lineno">13</span>         <span class="n">form</span> <span class="o">=</span> <span class="n">PostForm</span><span class="p">()</span>
+<span class="lineno">14</span> 
+<span class="lineno">15</span>     <span class="k">return</span> <span class="n">render_to_response</span><span class="p">(</span><span class="s">&#39;posts/form.html&#39;</span><span class="p">,</span> <span class="n">RequestContext</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="p">{</span>
+<span class="lineno">16</span>         <span class="s">&#39;form&#39;</span><span class="p">:</span> <span class="n">form</span><span class="p">,</span>
+<span class="lineno">17</span>         <span class="s">&#39;layout&#39;</span><span class="p">:</span> <span class="n">layout</span><span class="p">,</span>
+<span class="lineno">18</span>         <span class="p">}))</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              22/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>MicroBlog: templates</h1></header>
+            
+            
+            <section><h2>Crear un nuevo post:</h2>
+<div class="highlight"><pre><span class="lineno"> 1</span> {% block content %}
+<span class="lineno"> 2</span> 
+<span class="lineno"> 3</span>     <span class="nt">&lt;h1&gt;</span>Hi! Write your new post below:<span class="nt">&lt;/h1&gt;</span>
+<span class="lineno"> 4</span> 
+<span class="lineno"> 5</span>     <span class="nt">&lt;p&gt;</span><span class="ni">&amp;nbsp;</span><span class="nt">&lt;/p&gt;</span>
+<span class="lineno"> 6</span> 
+<span class="lineno"> 7</span>     <span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">&quot;form-{{ layout }}&quot;</span> <span class="na">action=</span><span class="s">&quot;&quot;</span> <span class="na">method=</span><span class="s">&quot;post&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 8</span>         {% csrf_token %}
+<span class="lineno"> 9</span>         {{ form|as_bootstrap:layout }}
+<span class="lineno">10</span>         {% if layout == &quot;horizontal&quot; %}
+<span class="lineno">11</span>             <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;form-actions&quot;</span><span class="nt">&gt;</span>
+<span class="lineno">12</span>                 <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;submit&quot;</span> <span class="na">value=</span><span class="s">&quot;Submit&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary&quot;</span><span class="nt">&gt;</span>
+<span class="lineno">13</span>             <span class="nt">&lt;/p&gt;</span>
+<span class="lineno">14</span>         {% else %}
+<span class="lineno">15</span>             <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;submit&quot;</span> <span class="na">value=</span><span class="s">&quot;Submit&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary&quot;</span><span class="nt">&gt;</span>
+<span class="lineno">16</span>         {% endif %}
+<span class="lineno">17</span>     <span class="nt">&lt;/form&gt;</span>
+<span class="lineno">18</span> 
+<span class="lineno">19</span>     <span class="nt">&lt;p&gt;</span>Hint: Submit the form to see error messages styled into it.<span class="nt">&lt;/p&gt;</span>
+<span class="lineno">20</span> 
+<span class="lineno">21</span> {% endblock %}
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              23/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>MicroBlog: templates</h1></header>
+            
+            
+            <section><h2>Mostrar los posts:</h2>
+<p>Microblog/microblog/posts/templates/posts/form.html:</p>
+<div class="highlight"><pre><span class="lineno"> 1</span> {% block content %}
+<span class="lineno"> 2</span>     <span class="nt">&lt;h1&gt;</span>Hi! Take a look at the current posts below:<span class="nt">&lt;/h1&gt;</span>
+<span class="lineno"> 3</span> 
+<span class="lineno"> 4</span>     {% for post in posts %}
+<span class="lineno"> 5</span>         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;well&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 6</span>             <span class="nt">&lt;h1&gt;</span>Author: {{ post.author.username }}<span class="nt">&lt;/h1&gt;</span>
+<span class="lineno"> 7</span>             <span class="nt">&lt;p&gt;</span>{{ post.message }}<span class="nt">&lt;/p&gt;</span>
+<span class="lineno"> 8</span>         <span class="nt">&lt;/div&gt;</span>
+<span class="lineno"> 9</span>     {% endfor %}
+<span class="lineno">10</span> {% endblock %}
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              24/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>MicroBlog: templates</h1></header>
+            
+            
+            <section><p>Microblog/microblog/posts/microblog/urls.py:</p>
+<div class="highlight"><pre><span class="lineno"> 1</span> <span class="c"># -*- coding: utf-8 -*-</span>
+<span class="lineno"> 2</span> <span class="kn">from</span> <span class="nn">django.conf.urls</span> <span class="kn">import</span> <span class="n">patterns</span><span class="p">,</span> <span class="n">include</span><span class="p">,</span> <span class="n">url</span>
+<span class="lineno"> 3</span> <span class="kn">from</span> <span class="nn">django.views.generic.simple</span> <span class="kn">import</span> <span class="n">direct_to_template</span>
+<span class="lineno"> 4</span> 
+<span class="lineno"> 5</span> <span class="c"># Uncomment the next two lines to enable the admin:</span>
+<span class="lineno"> 6</span> <span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
+<span class="lineno"> 7</span> <span class="n">admin</span><span class="o">.</span><span class="n">autodiscover</span><span class="p">()</span>
+<span class="lineno"> 8</span> 
+<span class="lineno"> 9</span> <span class="n">urlpatterns</span> <span class="o">=</span> <span class="n">patterns</span><span class="p">(</span><span class="s">&#39;&#39;</span><span class="p">,</span>
+<span class="lineno">10</span> 
+<span class="lineno">11</span>     <span class="n">url</span><span class="p">(</span><span class="s">r&#39;^accounts/login/$&#39;</span><span class="p">,</span> <span class="s">&#39;django.contrib.auth.views.login&#39;</span><span class="p">),</span>
+<span class="lineno">12</span> 
+<span class="lineno">13</span>     <span class="c"># Uncomment the admin/doc line below to enable admin documentation:</span>
+<span class="lineno">14</span>     <span class="n">url</span><span class="p">(</span><span class="s">r&#39;^admin/doc/&#39;</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="s">&#39;django.contrib.admindocs.urls&#39;</span><span class="p">)),</span>
+<span class="lineno">15</span> 
+<span class="lineno">16</span>     <span class="c"># Uncomment the next line to enable the admin:</span>
+<span class="lineno">17</span>     <span class="n">url</span><span class="p">(</span><span class="s">r&#39;^admin/&#39;</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">urls</span><span class="p">)),</span>
+<span class="lineno">18</span> 
+<span class="lineno">19</span>     <span class="c"># My urls:</span>
+<span class="lineno">20</span>     <span class="n">url</span><span class="p">(</span><span class="s">r&#39;^home$&#39;</span><span class="p">,</span> <span class="n">direct_to_template</span><span class="p">,</span>
+<span class="lineno">21</span>                    <span class="p">{</span><span class="s">&#39;template&#39;</span><span class="p">:</span> <span class="s">&#39;posts/index.html&#39;</span><span class="p">},</span> <span class="s">&quot;home&quot;</span><span class="p">),</span>
+<span class="lineno">22</span>     <span class="n">url</span><span class="p">(</span><span class="s">r&#39;^write_post/$&#39;</span><span class="p">,</span> <span class="s">&#39;posts.views.write_post&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;write_new_post&#39;</span><span class="p">),</span>
+<span class="lineno">23</span>     <span class="n">url</span><span class="p">(</span><span class="s">r&#39;^read_posts/$&#39;</span><span class="p">,</span> <span class="s">&#39;posts.views.show_timeline&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;read_posts&quot;</span><span class="p">),</span>
+<span class="lineno">24</span> <span class="p">)</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              25/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>MicroBlog: templates</h1></header>
+            
+            
+            <section><p>Microblog/microblog/posts/microblog/settings.py:</p>
+<p>Agregamos la app que creamos dentro de INSTALLED_APPS, en settings.py:</p>
+<div class="highlight"><pre><span class="lineno"> 1</span> <span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">(</span>
+<span class="lineno"> 2</span>     <span class="s">&#39;django.contrib.auth&#39;</span><span class="p">,</span>
+<span class="lineno"> 3</span>     <span class="s">&#39;django.contrib.contenttypes&#39;</span><span class="p">,</span>
+<span class="lineno"> 4</span>     <span class="s">&#39;django.contrib.sessions&#39;</span><span class="p">,</span>
+<span class="lineno"> 5</span>     <span class="s">&#39;django.contrib.sites&#39;</span><span class="p">,</span>
+<span class="lineno"> 6</span>     <span class="s">&#39;django.contrib.messages&#39;</span><span class="p">,</span>
+<span class="lineno"> 7</span>     <span class="s">&#39;django.contrib.staticfiles&#39;</span><span class="p">,</span>
+<span class="lineno"> 8</span> 
+<span class="lineno"> 9</span>     <span class="c"># Uncomment the next line to enable the admin:</span>
+<span class="lineno">10</span>     <span class="s">&#39;django.contrib.admin&#39;</span><span class="p">,</span>
+<span class="lineno">11</span> 
+<span class="lineno">12</span>     <span class="c"># Uncomment the next line to enable admin documentation:</span>
+<span class="lineno">13</span>     <span class="s">&#39;django.contrib.admindocs&#39;</span><span class="p">,</span>
+<span class="lineno">14</span> 
+<span class="lineno">15</span>     <span class="c"># 3rd party apps I added:</span>
+<span class="lineno">16</span>     <span class="s">&#39;django_extensions&#39;</span><span class="p">,</span>
+<span class="lineno">17</span>     <span class="s">&#39;bootstrap_toolkit&#39;</span><span class="p">,</span>
+<span class="lineno">18</span> 
+<span class="lineno">19</span>     <span class="c"># My apps:</span>
+<span class="lineno">20</span>     <span class="s">&#39;posts&#39;</span><span class="p">,</span>
+<span class="lineno">21</span> <span class="p">)</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              26/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>MicroBlog: templates</h1></header>
+            
+            
+            <section><p>Configuramos la base de datos con sqlite:</p>
+<div class="highlight"><pre><span class="lineno"> 1</span> <span class="n">DATABASES</span> <span class="o">=</span> <span class="p">{</span>
+<span class="lineno"> 2</span>     <span class="s">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span>
+<span class="lineno"> 3</span>         <span class="s">&#39;ENGINE&#39;</span><span class="p">:</span> <span class="s">&#39;django.db.backends.sqlite3&#39;</span><span class="p">,</span>
+<span class="lineno"> 4</span>         <span class="s">&#39;NAME&#39;</span><span class="p">:</span> <span class="s">&#39;bd.sqlite3&#39;</span><span class="p">,</span>
+<span class="lineno"> 5</span>         <span class="s">&#39;USER&#39;</span><span class="p">:</span> <span class="s">&#39;&#39;</span><span class="p">,</span>
+<span class="lineno"> 6</span>         <span class="s">&#39;PASSWORD&#39;</span><span class="p">:</span> <span class="s">&#39;&#39;</span><span class="p">,</span>
+<span class="lineno"> 7</span>         <span class="s">&#39;HOST&#39;</span><span class="p">:</span> <span class="s">&#39;&#39;</span><span class="p">,</span>
+<span class="lineno"> 8</span>         <span class="s">&#39;PORT&#39;</span><span class="p">:</span> <span class="s">&#39;&#39;</span><span class="p">,</span>
+<span class="lineno"> 9</span>     <span class="p">}</span>
+<span class="lineno">10</span> <span class="p">}</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              27/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>MicroBlog: templates</h1></header>
+            
+            
+            <section><p>Microblog/microblog/posts/views.py:</p>
+<p>Para que podamos acceder a los tweets desde el panel de administración(para borrarlos, editarlos, crear nuevos, listarlos), debemos registrar el model en el archivo admin.py:</p>
+<div class="highlight"><pre><span class="lineno">1</span> <span class="c"># -*- coding: utf-8 *-*</span>
+<span class="lineno">2</span> <span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
+<span class="lineno">3</span> <span class="kn">from</span> <span class="nn">posts.models</span> <span class="kn">import</span> <span class="n">Post</span>
+<span class="lineno">4</span> 
+<span class="lineno">5</span> <span class="k">class</span> <span class="nc">PostAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
+<span class="lineno">6</span>     <span class="n">list_display</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;author&#39;</span><span class="p">,</span> <span class="s">&#39;message&#39;</span><span class="p">,</span> <span class="s">&#39;date_posted&#39;</span><span class="p">,)</span>
+<span class="lineno">7</span>     <span class="n">search_fields</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;author__username&#39;</span><span class="p">,</span> <span class="s">&#39;message&#39;</span><span class="p">,</span> <span class="s">&#39;date_posted&#39;</span><span class="p">,)</span>
+<span class="lineno">8</span> 
+<span class="lineno">9</span> <span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">Post</span><span class="p">,</span> <span class="n">PostAdmin</span><span class="p">)</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              28/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>MicroBlog: templates</h1></header>
+            
+            
+            <section><h2>Habilitamos el admin:</h2>
+<p>En settings.py, descomentamos esta línea:</p>
+<div class="highlight"><pre><span class="lineno">1</span> <span class="c"># &#39;django.contrib.admin&#39;,</span>
+</pre></div>
+
+<p>En urls.py, descomentamos las siguientes líneas:</p>
+<div class="highlight"><pre><span class="lineno">1</span> <span class="c"># from django.contrib import admin</span>
+<span class="lineno">2</span> <span class="c"># admin.autodiscover()</span>
+</pre></div>
+
+<p>y esta línea:</p>
+<div class="highlight"><pre><span class="lineno">1</span> <span class="n">url</span><span class="p">(</span><span class="s">r&#39;^admin/&#39;</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">urls</span><span class="p">)),</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              29/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>MicroBlog: templates</h1></header>
+            
+            
+            <section><p>La estructura de archivos queda así:</p>
+<div class="highlight"><pre><span class="lineno"> 1</span> microblog/
+<span class="lineno"> 2</span> ├── bd.sqlite3
+<span class="lineno"> 3</span> ├── manage.py
+<span class="lineno"> 4</span> ├── microblog
+<span class="lineno"> 5</span> │   ├── __init__.py
+<span class="lineno"> 6</span> │   ├── settings.py
+<span class="lineno"> 7</span> │   ├── urls.py
+<span class="lineno"> 8</span> │   └── wsgi.py
+<span class="lineno"> 9</span> └── posts
+<span class="lineno">10</span>     ├── __init__.py
+<span class="lineno">11</span>     ├── admin.py
+<span class="lineno">12</span>     ├── forms.py
+<span class="lineno">13</span>     ├── models.py
+<span class="lineno">14</span>     ├── templates
+<span class="lineno">15</span>     │   ├── posts
+<span class="lineno">16</span>     │   │   ├── base.html
+<span class="lineno">17</span>     │   │   ├── form.html
+<span class="lineno">18</span>     │   │   ├── index.html
+<span class="lineno">19</span>     │   │   └── timeline.html
+<span class="lineno">20</span>     │   └── registration
+<span class="lineno">21</span>     │       └── login.html
+<span class="lineno">22</span>     ├── tests.py
+<span class="lineno">23</span>     └── views.py
+<span class="lineno">24</span> 
+<span class="lineno">25</span> 5 directories, 17 files
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              30/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>MicroBlog: templates</h1></header>
+            
+            
+            <section><h2>¡Hora de hacerlo andar!</h2>
+<p>Sincronicemos nuestros models a la base de datos:</p>
+<div class="highlight"><pre><span class="lineno">1</span> MacBookPro:microblog matias<span class="nv">$ </span>python manage.py syncdb
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              31/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Shine on you, crazy.... "microblog" :-P</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span class="lineno">1</span> MacBookPro:twitterclone matias<span class="nv">$ </span>python manage.py runserver
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              32/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Algunas dulzuras de Django:</h1></header>
+            
+            
+            <section><h2><strong>Forms:</strong></h2>
+<ul>
+<li>Django resuelve de manera simpática y prolija el manejo de forms.</li>
+<li>Form from models</li>
+</ul>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span class="lineno"> 1</span> <span class="kn">from</span> <span class="nn">django.forms</span> <span class="kn">import</span> <span class="n">ModelForm</span>
+<span class="lineno"> 2</span> 
+<span class="lineno"> 3</span> <span class="c"># Create the form class.</span>
+<span class="lineno"> 4</span> <span class="k">class</span> <span class="nc">PostForm</span><span class="p">(</span><span class="n">ModelForm</span><span class="p">):</span>
+<span class="lineno"> 5</span>     <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+<span class="lineno"> 6</span>     <span class="n">model</span> <span class="o">=</span> <span class="n">Post</span>
+<span class="lineno"> 7</span> 
+<span class="lineno"> 8</span> <span class="c"># Creating a form to add a Post.</span>
+<span class="lineno"> 9</span> <span class="n">form</span> <span class="o">=</span> <span class="n">PostForm</span><span class="p">()</span>
+<span class="lineno">10</span> 
+<span class="lineno">11</span> <span class="c"># Creating a form to change an existing article.</span>
+<span class="lineno">12</span> <span class="n">post</span> <span class="o">=</span> <span class="n">Post</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">pk</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="lineno">13</span> <span class="n">form</span> <span class="o">=</span> <span class="n">PostForm</span><span class="p">(</span><span class="n">instance</span><span class="o">=</span><span class="n">article</span><span class="p">)</span>
+<span class="lineno">14</span> <span class="o">...</span> <span class="o">&lt;</span><span class="n">do</span> <span class="n">something</span><span class="o">&gt;</span>
+<span class="lineno">15</span> <span class="n">edited_post</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              33/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Algunas dulzuras de Django:</h1></header>
+            
+            
+            <section><p><strong>Validación:</strong></p>
+<ul>
+<li>En los models, para cada campo</li>
+<li>Lista de funciones(validators).</li>
+<li>Cada validator hace un raise de ValidationError si el valor que tomó no cumple cierto criterio.</li>
+</ul>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span class="lineno"> 1</span> <span class="kn">from</span> <span class="nn">django.core.exceptions</span> <span class="kn">import</span> <span class="n">ValidationError</span>
+<span class="lineno"> 2</span> <span class="k">def</span> <span class="nf">validate_even</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+<span class="lineno"> 3</span>     <span class="k">if</span> <span class="n">value</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+<span class="lineno"> 4</span>         <span class="k">raise</span> <span class="n">ValidationError</span><span class="p">(</span><span class="s">u&#39;</span><span class="si">%s</span><span class="s"> is not an even number&#39;</span> <span class="o">%</span> <span class="n">value</span><span class="p">)</span>
+<span class="lineno"> 5</span> 
+<span class="lineno"> 6</span> <span class="c"># forms.py</span>
+<span class="lineno"> 7</span> <span class="kn">from</span> <span class="nn">django</span> <span class="kn">import</span> <span class="n">forms</span>
+<span class="lineno"> 8</span> <span class="k">class</span> <span class="nc">MyForm</span><span class="p">(</span><span class="n">forms</span><span class="o">.</span><span class="n">Form</span><span class="p">):</span>
+<span class="lineno"> 9</span>     <span class="n">even_field</span> <span class="o">=</span> <span class="n">forms</span><span class="o">.</span><span class="n">IntegerField</span><span class="p">(</span><span class="n">validators</span><span class="o">=</span><span class="p">[</span><span class="n">validate_even</span><span class="p">])</span>
+<span class="lineno">10</span> 
+<span class="lineno">11</span> <span class="c"># models.py</span>
+<span class="lineno">12</span> <span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
+<span class="lineno">13</span> <span class="k">class</span> <span class="nc">MyModel</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+<span class="lineno">14</span>     <span class="n">even_field</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">IntegerField</span><span class="p">(</span><span class="n">validators</span><span class="o">=</span><span class="p">[</span><span class="n">validate_even</span><span class="p">])</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              34/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Algunas dulzuras de Django:</h1></header>
+            
+            
+            <section><p><strong>ORM: Agregación</strong>:</p>
+<p>El ORM de Django tiene poderes de super vaca.</p>
+<ul>
+<li>Entre otra cosas súper interesantes, permite usar agregación.</li>
+<li>Funciones de agregación: Avg, Max, Min, Count</li>
+</ul>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span class="lineno"> 1</span> <span class="kn">from</span> <span class="nn">django.db.models</span> <span class="kn">import</span> <span class="n">Avg</span>
+<span class="lineno"> 2</span> 
+<span class="lineno"> 3</span> <span class="k">class</span> <span class="nc">Book</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+<span class="lineno"> 4</span>    <span class="n">isbn</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
+<span class="lineno"> 5</span>    <span class="n">name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+<span class="lineno"> 6</span>    <span class="n">price</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DecimalField</span><span class="p">(</span><span class="n">max_digits</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">decimal_places</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="lineno"> 7</span>    <span class="n">authors</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ManyToManyField</span><span class="p">(</span><span class="n">Author</span><span class="p">)</span>
+<span class="lineno"> 8</span> 
+<span class="lineno"> 9</span> <span class="kn">from</span> <span class="nn">django.db.models</span> <span class="kn">import</span> <span class="n">Avg</span>
+<span class="lineno">10</span> <span class="n">Book</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span><span class="n">Avg</span><span class="p">(</span><span class="s">&#39;price&#39;</span><span class="p">))</span>
+<span class="lineno">11</span> <span class="o">&gt;&gt;&gt;</span> <span class="p">{</span><span class="s">&#39;price__avg&#39;</span><span class="p">:</span> <span class="mf">34.35</span><span class="p">}</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              35/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Algunas dulzuras de Django:</h1></header>
+            
+            
+            <section><p><strong>Manejo de fechas:</strong></p>
+<ul>
+<li>Cómo ser feliz con DateFormat o "Todo lo que siempre quizo poder hacer y siempre se quejó de tener que hacer parcialmente a mano con fechas"</li>
+</ul>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span class="lineno"> 1</span> <span class="kn">from</span> <span class="nn">django.utils.dateformat</span> <span class="kn">import</span> <span class="n">DateFormat</span>
+<span class="lineno"> 2</span> <span class="kn">import</span> <span class="nn">datetime</span>
+<span class="lineno"> 3</span> 
+<span class="lineno"> 4</span> <span class="n">d</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+<span class="lineno"> 5</span> <span class="n">df</span> <span class="o">=</span> <span class="n">DateFormat</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<span class="lineno"> 6</span> 
+<span class="lineno"> 7</span> <span class="k">print</span> <span class="n">df</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s">&#39;jS F Y H:i&#39;</span><span class="p">)</span>
+<span class="lineno"> 8</span> <span class="c"># 7th October 2003 11:39</span>
+<span class="lineno"> 9</span> 
+<span class="lineno">10</span> <span class="k">print</span> <span class="n">df</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s">&#39;l F jS Y @ H:iA&#39;</span><span class="p">)</span>
+<span class="lineno">11</span> <span class="c"># Saturday April 30th 2011 @ 07:15AM</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              36/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Algunas dulzuras de Django:</h1></header>
+            
+            
+            <section><p><strong>Aplicaciones de terceros:</strong></p>
+<ul>
+<li>Para desarrollar con Django existen cienes y cienes de aplicaciones de terceros que podemos usar y que nos ahorran trabajo.</li>
+</ul>
+<p>Ejemplos:</p>
+<ul>
+<li>django-bootstrap-toolkit</li>
+<li>Django commandline extensions</li>
+<li>Django registration</li>
+<li>Django postman</li>
+<li>Treebeard</li>
+<li>South</li>
+<li>(¡larguííííísima lista de etcéteras!)</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              37/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Respirar profuuuuuuundo!</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              38/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>That's all, folks!</h1></header>
+            
+            
+            <section><p><img alt="monkey" src="Imgs/monkey.jpg" /></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              39/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>¿Preguntas? ¿Comentarios?</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              40/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_qr">
+          <div class="inner">
+            
+            <header><h1>De cero a Django en 45 minutos</h1></header>
+            
+            
+            <section><h2>Ahora que parecen estar de moda los QR-Codes</h2>
+<p>Acá les va uno con la url de mi blog:</p>
+<p class="qr"><img src="http://chart.apis.google.com/chart?chs=350x350&cht=qr&chl=http://scoobygalletas.blogspot.com/&chf=bg,s,00000000&choe=UTF-8" alt="QR Code" /></p>
+<p>[ http://scoobygalletas.blogspot.com/ ]</p>
+<p><strong>Matías Herranz [scoobygalletas@gmail.com]</strong></p>
+<p>El material de la charla, código incluído, lo voy a subir a mi blog/GitHub.</p>
+<h2><strong>¡Gracias!</strong></h2></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              41/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>De cero a Django en 45 minutos</h1></header>
+            
+            
+            <section><p>Referencias útiles:</p>
+<ul>
+<li>Web oficial del proyecto Django: http://www.djangoproject.com/</li>
+<li>Djando BootStrap Toolkit: https://github.com/dyve/django-bootstrap-toolkit</li>
+<li>http://docs.djangoproject.com/en/dev/topics/db/aggregation/</li>
+<li>http://docs.djangoproject.com/en/dev/ref/validators/</li>
+<li>http://docs.djangoproject.com/en/dev/topics/forms/modelforms/</li>
+<li>http://docs.djangoproject.com/en/dev/topics/db/aggregation/</li>
+<li>Lista de correo: http://groups.google.com/group/django-es</li>
+<li>Libro en español: http://trac.usla.org.ar/django-book</li>
+<li>Canal de IRC: #django-es en irc.freenode.net</li>
+<li>Colaboración de Manuel Kaufmann(a.k.a. "Humitos"), un tipazo y un grosso de Paraná.</li>
+<li>Slides hechas con LandSlide: https://github.com/adamzap/landslide/</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              42/42
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div id="toc" class="sidebar hidden">
+    <h2>Table of Contents</h2>
+    <table>
+      <caption>Table of Contents</caption>
+      
+      <tr id="toc-row-1">
+        <th><a href="#slide1">De cero a Django en 45 minutos</a></th>
+        <td><a href="#slide1">1</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-2">
+        <th><a href="#slide2">Matías Herranz</a></th>
+        <td><a href="#slide2">2</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-3">
+        <th><a href="#slide3">La idea era hablar de ....</a></th>
+        <td><a href="#slide3">3</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-4">
+        <th><a href="#slide4">-</a></th>
+        <td><a href="#slide4">4</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-5">
+        <th><a href="#slide5">Pero no se pudo....</a></th>
+        <td><a href="#slide5">5</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-6">
+        <th><a href="#slide6">-</a></th>
+        <td><a href="#slide6">6</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-7">
+        <th><a href="#slide7">Algunos conceptos básicos</a></th>
+        <td><a href="#slide7">7</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-8">
+        <th><a href="#slide8">Algunos conceptos básicos</a></th>
+        <td><a href="#slide8">8</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-9">
+        <th><a href="#slide9">Así que....</a></th>
+        <td><a href="#slide9">9</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-10">
+        <th><a href="#slide10">-</a></th>
+        <td><a href="#slide10">10</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-11">
+        <th><a href="#slide11">¡Y veamos de qué se trata esto!</a></th>
+        <td><a href="#slide11">11</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-12">
+        <th><a href="#slide12">Intro:</a></th>
+        <td><a href="#slide12">12</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-13">
+        <th><a href="#slide13">Una pizca de ingeniería de software</a></th>
+        <td><a href="#slide13">13</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-14">
+        <th><a href="#slide14">MVC y Django</a></th>
+        <td><a href="#slide14">14</a></td>
+      </tr>
+      
+        
+        <tr id="toc-row-15" class="sub">
+          <th><a href="#slide15">MVC aplicado a Django</a></th>
+          <td><a href="#slide15">15</a></td>
+        </tr>
+        
+      
+      
+      <tr id="toc-row-16">
+        <th><a href="#slide16">Habiendo hablado suficiente....</a></th>
+        <td><a href="#slide16">16</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-17">
+        <th><a href="#slide17">¡Escribamos código!</a></th>
+        <td><a href="#slide17">17</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-18">
+        <th><a href="#slide18">Hagamos un pequeño blog</a></th>
+        <td><a href="#slide18">18</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-19">
+        <th><a href="#slide19">Hagamos un pequeño blog</a></th>
+        <td><a href="#slide19">19</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-20">
+        <th><a href="#slide20">MicroBlog: models</a></th>
+        <td><a href="#slide20">20</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-21">
+        <th><a href="#slide21">MicroBlog: views</a></th>
+        <td><a href="#slide21">21</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-22">
+        <th><a href="#slide22">MicroBlog: views</a></th>
+        <td><a href="#slide22">22</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-23">
+        <th><a href="#slide23">MicroBlog: templates</a></th>
+        <td><a href="#slide23">23</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-24">
+        <th><a href="#slide24">MicroBlog: templates</a></th>
+        <td><a href="#slide24">24</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-25">
+        <th><a href="#slide25">MicroBlog: templates</a></th>
+        <td><a href="#slide25">25</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-26">
+        <th><a href="#slide26">MicroBlog: templates</a></th>
+        <td><a href="#slide26">26</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-27">
+        <th><a href="#slide27">MicroBlog: templates</a></th>
+        <td><a href="#slide27">27</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-28">
+        <th><a href="#slide28">MicroBlog: templates</a></th>
+        <td><a href="#slide28">28</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-29">
+        <th><a href="#slide29">MicroBlog: templates</a></th>
+        <td><a href="#slide29">29</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-30">
+        <th><a href="#slide30">MicroBlog: templates</a></th>
+        <td><a href="#slide30">30</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-31">
+        <th><a href="#slide31">MicroBlog: templates</a></th>
+        <td><a href="#slide31">31</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-32">
+        <th><a href="#slide32">Shine on you, crazy.... "microblog" :-P</a></th>
+        <td><a href="#slide32">32</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-33">
+        <th><a href="#slide33">Algunas dulzuras de Django:</a></th>
+        <td><a href="#slide33">33</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-34">
+        <th><a href="#slide34">Algunas dulzuras de Django:</a></th>
+        <td><a href="#slide34">34</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-35">
+        <th><a href="#slide35">Algunas dulzuras de Django:</a></th>
+        <td><a href="#slide35">35</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-36">
+        <th><a href="#slide36">Algunas dulzuras de Django:</a></th>
+        <td><a href="#slide36">36</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-37">
+        <th><a href="#slide37">Algunas dulzuras de Django:</a></th>
+        <td><a href="#slide37">37</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-38">
+        <th><a href="#slide38">Respirar profuuuuuuundo!</a></th>
+        <td><a href="#slide38">38</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-39">
+        <th><a href="#slide39">That's all, folks!</a></th>
+        <td><a href="#slide39">39</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-40">
+        <th><a href="#slide40">¿Preguntas? ¿Comentarios?</a></th>
+        <td><a href="#slide40">40</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-41">
+        <th><a href="#slide41">De cero a Django en 45 minutos</a></th>
+        <td><a href="#slide41">41</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-42">
+        <th><a href="#slide42">De cero a Django en 45 minutos</a></th>
+        <td><a href="#slide42">42</a></td>
+      </tr>
+      
+      
+    </table>
+  </div>
+  
+  <div id="help" class="sidebar hidden">
+    <h2>Help</h2>
+    <table>
+      <caption>Help</caption>
+      <tr>
+        <th>Table of Contents</th>
+        <td>t</td>
+      </tr>
+      <tr>
+        <th>Exposé</th>
+        <td>ESC</td>
+      </tr>
+      <tr>
+        <th>Full screen slides</th>
+        <td>e</td>
+      </tr>
+      <tr>
+        <th>Presenter View</th>
+        <td>p</td>
+      </tr>
+      <tr>
+        <th>Source Files</th>
+        <td>s</td>
+      </tr>
+      <tr>
+        <th>Slide Numbers</th>
+        <td>n</td>
+      </tr>
+      <tr>
+        <th>Toggle screen blanking</th>
+        <td>b</td>
+      </tr>
+      <tr>
+        <th>Show/hide slide context</th>
+        <td>c</td>
+      </tr>
+      <tr>
+        <th>Notes</th>
+        <td>2</td>
+      </tr>
+      <tr>
+        <th>Help</th>
+        <td>h</td>
+      </tr>
+    </table>
+  </div>
+  <script>main()</script>
+</body>
+</html>

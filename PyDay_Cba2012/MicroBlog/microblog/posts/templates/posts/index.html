@@ -1,0 +1,38 @@
+{% extends "posts/base.html" %}
+
+{% block content %}
+
+    <div class="well">
+        <h1>Django + BootStrap = Fancy microblog example!</h1>
+        <p>Here's a little example of what can be done using Django and some proper tools.</p>
+        <p><a class="btn btn-primary" href="/admin/">Go to the Django admin &raquo;</a></p>
+        <p><a class="btn btn-primary" href="{% url write_new_post %}">Go write a post &raquo;</a></p>
+    </div>
+
+    <div class="row">
+        <div class="span4">
+            <h2>Django</h2>
+
+            <p>Django is the excellent Python web framework that makes a programmer's life less repetitive.</p>
+
+            <p><a class="btn" href="http://www.djangoproject.com">View details &raquo;</a></p>
+        </div>
+        <div class="span4">
+            <h2>Bootstrap</h2>
+
+            <p>Bootstrap is a beautiful CSS framework with an optional JavaScript add-on.</p>
+
+            <p><a class="btn" href="http://twitter.github.com/bootstrap/">View details &raquo;</a></p>
+        </div>
+        <div class="span4">
+            <h2>django-bootstrap-toolkit</h2>
+
+            <p>Is just a simple hustle to get two kinds of awesome together.</p>
+
+            <p><a class="btn" href="https://github.com/dyve/django-bootstrap-toolkit/">View details &raquo;</a></p>
+        </div>
+    </div>
+
+    <p>A big thanks to all the people that worked on Django and Bootstrap.</p>
+
+{% endblock %}
